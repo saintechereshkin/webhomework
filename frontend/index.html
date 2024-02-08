@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+        <script type="module" src="index.js"></script>
+        <title>Provisory</title>
+    </head>
+    <body>
+        <header class="app-header" id="app-header">
+            <div class="app-header__network-label">
+                <h1 class="network-name">
+                    Лекарства
+                </h1>
+                <span class="network-class">
+                    Сеть аптек
+                </span>
+            </div>
+            <div class="app-header__date-block">
+                <button type="button" id="date-forwards-btn" class="date-change-btn">+</button>
+                <label id="date-display">01.03.2024</label>
+                <button type="button" id="date-backwards-btn" class="date-change-btn">-</button>
+            </div>
+            <div class="app-header__user-info">
+                <div class="user-avatar"></div>
+                <span class="user-username">Илья Черешкин</span>
+            </div>
+        </header>
+        <main id="app-main">
+            <h1 class="page-header">Управление заказами</h1>
+
+            
+            <ul class="orderlist">
+
+                <li class="orderlist__item creation-block reduced-creation-block-height" id="creation-block-li">
+                    <div class="creation-block__form-header">
+                        <h2 class="form-label">Создание заказа</h2>
+                        <label class="form-toggler">
+                            <input id="form-visible-switch" class="form-toggler__toggler" type="checkbox"/>
+                            <div class="form-toggler__indicator">&#8595;</div>
+                        </label>
+                    </div>
+                    <form method="post" class="order-creator hidden" id="order-creator-form">
+                        <input type="hidden" name="order-ID" value="0"/>
+                        <div class="order-creator__form-container">
+                            <div class="form-block">
+                                <h3 class="form-block__input-label">Фамилия Имя Отчество</h3>
+                                <input class="form-block__input-field" type="text" name="order-FIO" required>
+                            </div>
+                            <div class="form-block">
+                                <h3 class="form-block__input-label">Дата доставки</h3>
+                                <input class="form-block__input-field" type="date" name="order-DATE" required>
+                            </div>
+                            <div class="form-block">
+                                <h3 class="form-block__input-label">Рецепт</h3>
+                                <ul class="form-block__recipe-list">
+                                    <button id="recipe-add-btn" class="recipe-list-item__add-btn" type="button">&#10010;</button>
+                                </ul>
+                            </div>
+                            <div class="form-block">
+                                <h3 class="form-block__input-label">Состав заказа</h3>
+                                <ul class="form-block__medicine-list">
+                                    <button id="med-list-item-add-btn" class="medicine-list-item__add-btn" type="button">&#10010;</button>
+                                </ul>
+                            </div>
+                            <button class="form__confirm-btn" type="submit" id="order-SUBMIT">Отправить</button>
+                            <button class="form__reset-btn" type="button" id="order-FORM-RESET">Сбросить</button>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </main>
+    </body>
+</html>

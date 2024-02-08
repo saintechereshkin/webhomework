@@ -1,0 +1,387 @@
+:root {
+    --fancy-font-family: 'Kanit', cursive;
+    --main-font-family: 'Kanit', serif;
+
+    --indigo-10-color: #ede6f3;
+    --indigo-20-color: #dbcce6;
+    --indigo-40-color: #b799cc;
+    --indigo-60-color: #9466b4;
+    --indigo-80-color: #70339b;
+    --indigo-color: #f6f6f6;
+
+    --blue-10-color: #93C4F5;
+    --blue-30-color: #7CBAF9;
+    --blue-50-color: #0E5EFF;
+    --blue-70-color: #020275;
+    --blue-90-color: #b3cce3;
+
+    --red-10-color: #ffcccc;
+    --red-30-color: #ff6666;
+    --red-50-color: #ff0000;
+    --red-70-color: #990000;
+    --red-90-color: #330000;
+
+    --green-10-color: #ccffcc;
+    --green-30-color: #66ff66;
+    --green-50-color: #00ff00;
+    --green-70-color: #009900;
+    --green-90-color: #003300;
+
+    --whilte-color: white;
+    --black-color: black;
+
+    --light-text-color: var(--indigo-10-color);
+    --dark-text-color: var(--blue-90-color);
+
+    --some-btn-sizes: 6vh;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:active, input:active {
+    border-style: ridge;
+}
+
+body {
+    padding: 0 4vw;
+    min-height: 100vh;
+    background: #000000;
+    background-size: 100% 150%;
+    font-family: var(--main-font-family);
+    color: var(--light-text-color);
+}
+
+
+
+
+
+#app-header {
+    width: 100%;
+    padding: 2vh 0%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.network-name {
+    font-family: var(--fancy-font-family);
+}
+
+#date-display {
+    height: var(--some-btn-sizes);
+    font-size: calc(var(--some-btn-sizes) * 0.7);
+}
+
+.date-change-btn {
+    border: 3px groove var(--blue-10-color);
+    border-radius: 1vh;
+    height: var(--some-btn-sizes);
+    width: var(--some-btn-sizes);
+    background: none;
+    color: var(--white-color);
+    font-size: calc(var(--some-btn-sizes) * 0.7);
+}
+
+.app-header__user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 8vh;
+    height: 8vh;
+    box-sizing: border-box;
+    border: 3px solid var(--blue-10-color);
+    border-radius: 50%;
+    margin: 0 1vw;
+}
+
+.user-username {
+    font-size: 3vh;
+}
+
+.page-header {
+    text-align: center;
+}
+
+
+
+
+
+#app-main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+
+
+
+
+tr[class="stock-table__common-row"] > td {
+    border: 2px solid var(--indigo-10-color);
+    padding: 10px 20px;
+}
+
+tr[class="stock-table__head-row"] > th {
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.stock-table {
+    border: 3px solid var(--indigo-40-color);
+    align-self: center;
+}
+
+
+
+
+
+.orderlist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.orderlist__item {
+    box-sizing: border-box;
+    padding: 1vh 1vw;
+    padding-bottom: 0;
+    border: 3px solid var(--indigo-40-color);
+    border-radius: 2vh;
+    margin: 2vh 0;
+    box-shadow: 2px 2px 4px 0.5px #cacaca;
+    background: radial-gradient(var(--blue-90-color), var(--blue-70-color));
+}
+
+.order__top-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-block__delete-order {
+    border: 3px groove var(--red-10-color);
+    border-radius: 1vh;
+    height: var(--some-btn-sizes);
+    width: var(--some-btn-sizes);
+    background: none;
+    color: var(--white-color);
+    font-size: calc(var(--some-btn-sizes) * 0.6);
+}
+
+.top-block__edit-order {
+    border: 3px groove var(--blue-10-color);
+    border-radius: 1vh;
+    height: var(--some-btn-sizes);
+    width: var(--some-btn-sizes);
+    background: none;
+    color: var(--white-color);
+    font-size: calc(var(--some-btn-sizes) * 0.6);
+}
+
+
+
+
+
+.medicine-list__item {
+    margin: 2vh 0;
+    border: 3px groove var(--blue-10-color);
+    border-radius: 2vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.medicine-desc-part-name {
+    width: 50%;
+    margin: 0 2vw;
+}
+
+.medicine-desc-part-count, .medicine-desc-part-recipe {
+    margin: 0 1vw;
+}
+
+
+
+
+
+.creation-block {
+    transition: 1s;
+    border: none;
+    background: none;
+    box-shadow: none;
+}
+
+.reduced-creation-block-height {
+    height: calc(var(--some-btn-sizes) * 1.5);
+}
+
+.creation-block__form-header {
+    display: flex;
+    height: var(--some-btn-sizes);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-toggler {
+    display: flex;
+    justify-content: center;
+    border: 3px groove var(--blue-10-color);
+    border-radius: 1vh;
+    height: var(--some-btn-sizes);
+    width: var(--some-btn-sizes);
+}
+
+.form-toggler:hover {
+    cursor: pointer;
+}
+
+.form-toggler__toggler {
+    position: fixed;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    top: 0;
+}
+
+.form-toggler__indicator {
+    transition: 1s;
+    width: fit-content;
+    height: 100%;
+    font-size: calc(var(--some-btn-sizes) * 0.8);
+}
+
+.form-toggler__toggler:checked + .form-toggler__indicator {
+    transform: rotate(180deg);
+}
+
+.order-creator {
+    transition: 0.5s;
+    transform-origin: top right;
+}
+
+.hidden {
+    transform: scaleY(0) scaleX(0);
+}
+
+.order-creator__form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-block {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100%;
+}
+
+.form-block__input-field {
+    width: 50%;
+    height: 3vh;
+    border: 3px groove var(--indigo-40-color);
+    border-radius: 1vh;
+    background: var(--indigo-color);
+    color: #000000;
+}
+
+.form-block__recipe-list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-width: 50%;
+}
+
+.form-block__medicine-list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.recipe-list__item {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    height: 4vh;
+}
+
+.recipe-list__item-name, .medicine-list__item-name {
+    width: -webkit-fill-available;
+    border: 3px groove var(--blue-10-color);
+    border-radius: 1vh;
+    background: var(--blue-90-color);
+    color: #000000;
+}
+
+.recipe-list-item__delete-btn {
+    border: 3px groove var(--red-30-color);
+    border-radius: 1vh;
+    width: 10%;
+    min-width: 2vw;
+    color: #000000;
+    background: var(--blue-70-color);
+}
+
+.recipe-list-item__add-btn {
+    border: 3px groove var(--green-10-color);
+    border-radius: 1vh;
+    background: #ffffff;
+    color: #000000;
+}
+
+.medicine-list-item__add-btn {
+    border: 3px groove var(--green-10-color);
+    border-radius: 1vh;
+    background: var(--blue-90-color);
+    color: var(--white-color);
+    min-width: 4vw;
+}
+
+.medicine-list-item__delete-btn {
+    border: 3px groove var(--red-30-color);
+    border-radius: 1vh;
+    width: 10%;
+    height: 4vh;
+    color: var(--white-color);
+    background: var(--blue-70-color);
+}
+
+.form__confirm-btn {
+    font-family: var(--main-font-family);
+    border: 3px groove var(--green-70-color);
+    border-radius: 1vh;
+    height: 6vh;
+    width: 50%;
+    background: #1552d5;
+    color: var(--white-color);
+    margin: 1vh 0;
+}
+
+.form__reset-btn {
+    font-family: var(--main-font-family);
+    border: 3px groove var(--red-70-color);
+    border-radius: 1vh;
+    height: 6vh;
+    width: 50%;
+    background: #1552d5;
+    color: var(--white-color);
+    margin: 1vh 0;
+}
